@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Roblox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="name-screen" class="card">
+        <h1 class="title">Quiz Roblox</h1>
+        <p class="subtitle">
+          Uji pengetahuanmu tentang Roblox! Mulai dengan menuliskan nama, lalu
+          jawab semua pertanyaan.
+        </p>
+        <form id="name-form" class="name-form">
+          <label for="name-input" class="label">Nama kamu</label>
+          <input
+            id="name-input"
+            name="player"
+            type="text"
+            class="text-input"
+            placeholder="Masukkan nama..."
+            autocomplete="name"
+            required
+          />
+          <button id="start-btn" type="submit" class="primary-btn" disabled>
+            Mulai
+          </button>
+        </form>
+      </section>
+
+      <section id="quiz-screen" class="card" hidden>
+        <header class="quiz-header">
+          <div>
+            <h1 class="title">Quiz Roblox</h1>
+            <p class="subtitle">Jawab semua pertanyaan di bawah ini.</p>
+          </div>
+          <p class="player-name">
+            Pemain: <span id="player-name">-</span>
+          </p>
+        </header>
+        <form id="quiz-form" class="quiz-form">
+          <div id="question-container" class="questions"></div>
+          <button id="submit-btn" type="submit" class="primary-btn">
+            Kumpulkan Jawaban
+          </button>
+        </form>
+      </section>
+
+      <section id="result-screen" class="card" hidden>
+        <h1 class="title">Hasil Quiz</h1>
+        <p class="subtitle">
+          Terima kasih sudah bermain, <span id="result-name"></span>!
+        </p>
+        <p id="result-summary" class="result-summary"></p>
+        <div class="leaderboard">
+          <h2>Leaderboard</h2>
+          <p class="leaderboard-caption">
+            Skor akan tersimpan di perangkat ini.
+          </p>
+          <ol id="leaderboard-list" class="leaderboard-list"></ol>
+        </div>
+        <button id="restart-btn" type="button" class="secondary-btn">
+          Main Lagi
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Dibuat untuk belajar seputar Roblox &mdash; semoga menyenangkan!</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
